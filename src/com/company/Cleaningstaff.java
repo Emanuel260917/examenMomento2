@@ -1,6 +1,6 @@
 package com.company;
 
-public class cleaningstaff extends person {
+public class Cleaningstaff extends Person {
 
     private String DayOff;
 

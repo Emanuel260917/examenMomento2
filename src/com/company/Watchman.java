@@ -1,6 +1,6 @@
 package com.company;
 
-public class watchman extends person {
+public class Watchman extends Person {
 
 
     private String Weapon;

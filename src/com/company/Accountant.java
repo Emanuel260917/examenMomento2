@@ -1,6 +1,6 @@
 package com.company;
 
-public class accountant extends person {
+public class Accountant extends Person {
 
     private String Leader;
     private String Parking;

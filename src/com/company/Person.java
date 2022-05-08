@@ -1,6 +1,6 @@
 package com.company;
 
-public class person {
+public class Person {
     private String Name;
     private String Identification;
     private  int Age;

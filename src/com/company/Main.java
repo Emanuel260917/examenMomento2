@@ -8,111 +8,111 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        Scanner inputdata = new Scanner(System.in);
+        Scanner inputData = new Scanner(System.in);
 
-        List<watchman> vigilante = new ArrayList<>();
-        List<cleaningstaff> limpieza = new ArrayList<>();
-        List<accountant> contador = new ArrayList<>();
-        List<admin> administrador = new ArrayList<>();
-    boolean flagstop = false;
-    while (!flagstop){
-        System.out.println("digite 1 para ingresar vigilante, 2 para listar los vigilantes, 3 para ingresar limpieza, \n" +
-                "4 para listar limpieza, 5 para ingresar contador, 6 para listar contador, 7 para ingresar edministrador, \n" +
-                "8 para listar administrador, digite 9 para salir");
-        int option = Integer.parseInt(inputdata.nextLine());
+        List<Watchman> watchmanList = new ArrayList<>();
+        List<Cleaningstaff> cleaningstaffList = new ArrayList<>();
+        List<Accountant> accountantList = new ArrayList<>();
+        List<Admin> adminList = new ArrayList<>();
+    boolean stop = true;
+    while (stop){
+        System.out.println("ingrese 1=vigilante, 2=listar los vigilantes, 3=limpieza, \n" +
+                "4=listar limpieza, 5=contador, 6=listar contador, 7=edministrador, \n" +
+                "8=listar administrador, 9=salir");
+        int option = Integer.parseInt(inputData.nextLine());
         switch (option){
             case 1:
-                watchman wat = new watchman();
+                Watchman watchman = new Watchman();
                 System.out.println("ingrese su nombre: ");
-                wat.setName(inputdata.nextLine());
+                watchman.setName(inputData.nextLine());
                 System.out.println("ingrese su identificacion: ");
-                wat.setIdentification(inputdata.nextLine());
+                watchman.setIdentification(inputData.nextLine());
                 System.out.println("ingrese la edad: ");
-                wat.setAge(Integer.parseInt(inputdata.nextLine()));
+                watchman.setAge(Integer.parseInt(inputData.nextLine()));
                 System.out.println("ingrese su arma");
-                wat.setWeapon(inputdata.nextLine());
+                watchman.setWeapon(inputData.nextLine());
                 System.out.println("ingrese su dia de trabajo");
-                wat.setWorkday(inputdata.nextLine());
-                vigilante.add(wat);
+                watchman.setWorkday(inputData.nextLine());
+                watchmanList.add(watchman);
                 break;
             case 2:
-                for (int i = 0; i < vigilante.size(); i++) {
-                    System.out.println(vigilante.get(i).getName());
-                    System.out.println(vigilante.get(i).getIdentification());
-                    System.out.println(vigilante.get(i).getAge());
-                    System.out.println(vigilante.get(i).getWeapon());
-                    System.out.println(vigilante.get(i).getWorkday());
+                for (int i = 0; i < watchmanList.size(); i++) {
+                    System.out.println("Name " + watchmanList.get(i).getName());
+                    System.out.println("Identification " + watchmanList.get(i).getIdentification());
+                    System.out.println("Age " + watchmanList.get(i).getAge());
+                    System.out.println("Weapon" + watchmanList.get(i).getWeapon());
+                    System.out.println("WorkDay" + watchmanList.get(i).getWorkday());
                 }
                 break;
             case 3:
-                cleaningstaff cle = new cleaningstaff();
+                Cleaningstaff cleaningstaff = new Cleaningstaff();
                 System.out.println("ingrese su nombre: ");
-                cle.setName(inputdata.nextLine());
+                cleaningstaff.setName(inputData.nextLine());
                 System.out.println("ingrese su identificacion: ");
-                cle.setIdentification(inputdata.nextLine());
+                cleaningstaff.setIdentification(inputData.nextLine());
                 System.out.println("ingrese la edad: ");
-                cle.setAge(Integer.parseInt(inputdata.nextLine()));
+                cleaningstaff.setAge(Integer.parseInt(inputData.nextLine()));
                 System.out.println("ingrese su dia libre");
-                cle.setDayOff(inputdata.nextLine());
-                limpieza.add(cle);
+                cleaningstaff.setDayOff(inputData.nextLine());
+                cleaningstaffList.add(cleaningstaff);
                 break;
             case 4:
-                for (int i = 0; i < limpieza.size(); i++) {
-                    System.out.println(limpieza.get(i).getName());
-                    System.out.println(limpieza.get(i).getIdentification());
-                    System.out.println(limpieza.get(i).getAge());
-                    System.out.println(limpieza.get(i).getDayOff());
+                for (int i = 0; i < cleaningstaffList.size(); i++) {
+                    System.out.println("Name " + cleaningstaffList.get(i).getName());
+                    System.out.println("Identification " + cleaningstaffList.get(i).getIdentification());
+                    System.out.println("Age " + cleaningstaffList.get(i).getAge());
+                    System.out.println("DayOff " + cleaningstaffList.get(i).getDayOff());
 
                 }
                 break;
             case 5:
-                accountant acc = new accountant();
+                Accountant accountant = new Accountant();
                 System.out.println("ingrese su nombre: ");
-                acc.setName(inputdata.nextLine());
+                accountant.setName(inputData.nextLine());
                 System.out.println("ingrese su identificacion: ");
-                acc.setIdentification(inputdata.nextLine());
+                accountant.setIdentification(inputData.nextLine());
                 System.out.println("ingrese la edad: ");
-                acc.setAge(Integer.parseInt(inputdata.nextLine()));
+                accountant.setAge(Integer.parseInt(inputData.nextLine()));
                 System.out.println("ingrese su lider");
-                acc.setLeader(inputdata.nextLine());
+                accountant.setLeader(inputData.nextLine());
                 System.out.println("ingrese estacionamiento");
-                acc.setParking(inputdata.nextLine());
-                contador.add(acc);
+                accountant.setParking(inputData.nextLine());
+                accountantList.add(accountant);
                 break;
             case 6:
-                for (int i = 0; i < contador.size(); i++) {
-                    System.out.println(contador.get(i).getName());
-                    System.out.println(contador.get(i).getIdentification());
-                    System.out.println(contador.get(i).getAge());
-                    System.out.println(contador.get(i).getLeader());
-                    System.out.println(contador.get(i).getParking());
+                for (int i = 0; i < accountantList.size(); i++) {
+                    System.out.println("Name " + accountantList.get(i).getName());
+                    System.out.println("Identification " + accountantList.get(i).getIdentification());
+                    System.out.println("Age" + accountantList.get(i).getAge());
+                    System.out.println("Leader " + accountantList.get(i).getLeader());
+                    System.out.println("Parking " + accountantList.get(i).getParking());
                 }
                 break;
             case 7:
-                admin ad = new admin();
+                Admin admin = new Admin();
                 System.out.println("ingrese su nombre: ");
-                ad.setName(inputdata.nextLine());
+                admin.setName(inputData.nextLine());
                 System.out.println("ingrese su identificacion: ");
-                ad.setIdentification(inputdata.nextLine());
+                admin.setIdentification(inputData.nextLine());
                 System.out.println("ingrese la edad: ");
-                ad.setAge(Integer.parseInt(inputdata.nextLine()));
+                admin.setAge(Integer.parseInt(inputData.nextLine()));
                 System.out.println("ingrese su lider");
-                ad.setLeader(inputdata.nextLine());
+                admin.setLeader(inputData.nextLine());
                 System.out.println("ingrese estacionamiento");
-                ad.setParking(inputdata.nextLine());
-                administrador.add(ad);
+                admin.setParking(inputData.nextLine());
+                adminList.add(admin);
                 break;
             case 8:
-                for (int i = 0; i < administrador.size(); i++) {
-                    System.out.println(administrador.get(i).getName());
-                    System.out.println(administrador.get(i).getIdentification());
-                    System.out.println(administrador.get(i).getAge());
-                    System.out.println(administrador.get(i).getLeader());
-                    System.out.println(administrador.get(i).getParking());
+                for (int i = 0; i < adminList.size(); i++) {
+                    System.out.println("Name " + adminList.get(i).getName());
+                    System.out.println("Identification " + adminList.get(i).getIdentification());
+                    System.out.println("Age" + adminList.get(i).getAge());
+                    System.out.println("Leader " + adminList.get(i).getLeader());
+                    System.out.println("Parking " + adminList.get(i).getParking());
                 }
                 break;
             case 9:
-                flagstop = true;
+                stop = false;
                 break;
         }
     }
